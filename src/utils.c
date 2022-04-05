@@ -6,7 +6,7 @@
 /*   By: ibulak <ibulak@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/22 14:10:17 by ibulak        #+#    #+#                 */
-/*   Updated: 2022/03/22 14:57:15 by ibulak        ########   odam.nl         */
+/*   Updated: 2022/04/05 21:46:11 by ibulak        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,16 @@ double	ft_atof(char *s, int sign)
 	}
 	if (*s == '.')
 		s++;
+	if (!ft_isdigit(*s))
+		ft_error_inputs();
 	while (ft_isdigit(*s))
 	{
 		nbr = nbr * 10.0 + (*s - '0');
 		div *= 10.0;
 		s++;
 	}
+	if (*s && !ft_isdigit(*s))
+		ft_error_inputs();
 	return (nbr * sign / div);
 }
 

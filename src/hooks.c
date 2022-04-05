@@ -6,7 +6,7 @@
 /*   By: ibulak <ibulak@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/22 14:00:58 by ibulak        #+#    #+#                 */
-/*   Updated: 2022/03/22 14:55:48 by ibulak        ########   odam.nl         */
+/*   Updated: 2022/04/03 14:34:39 by ibulak        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	keyhook(int keycode, t_fractol *ptr)
 	if (keycode == ESC)
 		ft_destroy(ptr);
 	if (keycode == KEY_C)
-		ptr->color = ptr->color + 0xFFFFFF;
+		ptr->color = ptr->color + 0xFF;
 	if (keycode == KEY_1)
 		ft_turnto_mandelbrot(ptr);
 	if (keycode == KEY_2)

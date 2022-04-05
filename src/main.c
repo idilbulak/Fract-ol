@@ -6,7 +6,7 @@
 /*   By: ibulak <ibulak@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/22 14:09:33 by ibulak        #+#    #+#                 */
-/*   Updated: 2022/03/22 14:09:34 by ibulak        ########   odam.nl         */
+/*   Updated: 2022/04/05 21:57:25 by ibulak        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,5 @@ int	main(int argc, char **argv)
 		ft_error_inputs();
 	else
 		ft_init(ptr);
-	system("leaks fractol");
 	return (0);
 }

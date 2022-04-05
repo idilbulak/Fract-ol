@@ -6,7 +6,7 @@
 /*   By: ibulak <ibulak@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/22 13:59:00 by ibulak        #+#    #+#                 */
-/*   Updated: 2022/03/22 14:22:52 by ibulak        ########   odam.nl         */
+/*   Updated: 2022/04/05 22:15:37 by ibulak        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,28 @@ void	ft_mandelbrot(t_fractol *ptr)
 
 void	ft_julia_parameters(int argc, char *argv[], t_fractol *ptr)
 {
-	if (argc == 4 && ft_atof(argv[2], 1) && ft_atof(argv[3], 1))
+	if (argc == 4)
 	{
-		ptr->c_a = ft_atof(argv[2], 1);
-		ptr->c_b = ft_atof(argv[3], 1);
+		if (!ft_strncmp("0", argv[2], 2) && !ft_strncmp("0", argv[3], 2))
+		{
+			ptr->c_a = 0;
+			ptr->c_b = 0;
+		}
+		// if (!ft_strncmp("0", argv[2], 1) && ft_strncmp("0", argv[3], 1))
+		// {
+		// 	ptr->c_a = 0;
+		// 	ptr->c_b = ft_atof(argv[3], 1);
+		// }
+		// if (!ft_strncmp("0", argv[3], 1) && ft_strncmp("0", argv[2], 1))
+		// {
+		// 	ptr->c_a = ft_atof(argv[2], 1);
+		// 	ptr->c_b = 0;
+		// }
+		else
+		{
+			ptr->c_a = ft_atof(argv[2], 1);
+			ptr->c_b = ft_atof(argv[3], 1);
+		}
 	}
 	else
 		ft_error_inputs();
