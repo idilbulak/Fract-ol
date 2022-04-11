@@ -6,7 +6,7 @@
 /*   By: ibulak <ibulak@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/22 14:26:56 by ibulak        #+#    #+#                 */
-/*   Updated: 2022/03/22 15:18:32 by ibulak        ########   odam.nl         */
+/*   Updated: 2022/04/09 14:31:40 by ibulak        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ void	ft_choose_fractol(t_fractol *ptr);
 int		ft_create_image(t_fractol *ptr);
 int		ft_init(t_fractol *ptr);
 int		ft_isdigit(int c);
-double	ft_atof(char *s, int sign);
+double	ft_atof(char *s, int sign, double nbr, double div);
 void	ft_julia_parameters(int argc, char *argv[], t_fractol *ptr);
 void	ft_julia(t_fractol *ptr);
 void	ft_settings(t_fractol *ptr);

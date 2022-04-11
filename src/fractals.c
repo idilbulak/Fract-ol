@@ -6,7 +6,7 @@
 /*   By: ibulak <ibulak@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/22 13:59:00 by ibulak        #+#    #+#                 */
-/*   Updated: 2022/04/05 22:15:37 by ibulak        ########   odam.nl         */
+/*   Updated: 2022/04/09 14:31:14 by ibulak        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,20 +49,10 @@ void	ft_julia_parameters(int argc, char *argv[], t_fractol *ptr)
 			ptr->c_a = 0;
 			ptr->c_b = 0;
 		}
-		// if (!ft_strncmp("0", argv[2], 1) && ft_strncmp("0", argv[3], 1))
-		// {
-		// 	ptr->c_a = 0;
-		// 	ptr->c_b = ft_atof(argv[3], 1);
-		// }
-		// if (!ft_strncmp("0", argv[3], 1) && ft_strncmp("0", argv[2], 1))
-		// {
-		// 	ptr->c_a = ft_atof(argv[2], 1);
-		// 	ptr->c_b = 0;
-		// }
 		else
 		{
-			ptr->c_a = ft_atof(argv[2], 1);
-			ptr->c_b = ft_atof(argv[3], 1);
+			ptr->c_a = ft_atof(argv[2], 1, 0.0, 1.0);
+			ptr->c_b = ft_atof(argv[3], 1, 0.0, 1.0);
 		}
 	}
 	else
